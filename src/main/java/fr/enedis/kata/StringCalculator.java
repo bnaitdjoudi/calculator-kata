@@ -13,7 +13,8 @@ public class StringCalculator {
             int last = numbers.indexOf("\\n")>0?numbers.indexOf("\\n"):0;
             String separator = numbers.substring(0,last).replace("//","");
             String[] nums = "".equals(separator)?  numbers.split("\\n|,"):
-                    numbers.substring(last+2).split(separator);
+                    numbers.substring(last+2).split(separator.replace("]","]|"));
+
             for (String item : nums) {
 
                 int num = Integer.parseInt("0"+item);
