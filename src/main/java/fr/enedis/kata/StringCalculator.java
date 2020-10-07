@@ -16,14 +16,12 @@ public class StringCalculator {
                     numbers.substring(last+2).split(separator);
             for (String item : nums) {
 
-                int num = Integer.parseInt(item);
+                int num = Integer.parseInt("0"+item);
                 if(num<=1000)
                 total += num;
-
                 if(num<0){
                     negatifs.add(item);
                 }
-
             }
         }
         if (!negatifs.isEmpty()) {

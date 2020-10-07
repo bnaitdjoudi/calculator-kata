@@ -61,4 +61,10 @@ public class StringCalculatorTest {
 
         assertEquals(3,calculator.add("//;\\n1;2;1001"),"//;\\n1;2;1000 should return 3");
     }
+
+    @Test
+    public void separatorMoreThanChar() {
+
+        assertEquals(6,calculator.add("//[***]\\n1***2***3"),"//[***]\\n1***2***3 should return 6");
+    }
 }
