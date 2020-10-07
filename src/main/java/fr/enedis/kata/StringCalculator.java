@@ -17,10 +17,13 @@ public class StringCalculator {
             for (String item : nums) {
 
                 int num = Integer.parseInt(item);
+                if(num<=1000)
                 total += num;
+
                 if(num<0){
                     negatifs.add(item);
                 }
+
             }
         }
         if (!negatifs.isEmpty()) {

@@ -55,4 +55,10 @@ public class StringCalculatorTest {
                     "negatif value not allowed [-3, -4]").getCause(),e.getCause());
         }
     }
+
+    @Test
+    public void ignoringGreaterThan1000() {
+
+        assertEquals(3,calculator.add("//;\\n1;2;1001"),"//;\\n1;2;1000 should return 3");
+    }
 }
