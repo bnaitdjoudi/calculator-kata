@@ -26,4 +26,10 @@ public class StringCalculatorTest {
 
         assertEquals(calculator.add("1,2"), 3,"1,2 should return 3");
     }
+
+    @Test
+    public void lotNumberShouldAdded() {
+
+        assertEquals(calculator.add("1,2,3"), 6,"1,2,3 should return 6");
+    }
 }
