@@ -69,8 +69,14 @@ public class StringCalculatorTest {
     }
 
     @Test
-    public void multipleSeparatir() {
+    public void multipleSeparator() {
 
         assertEquals(6,calculator.add("//[*][%]\\n1*2%3"),"//[***]\\n1***2***3 should return 6");
+    }
+
+    @Test
+    public void multipleSeparatorMorThanCar() {
+
+        assertEquals(6,calculator.add("//[**][%%%%]\\n1**2%%%3"),"//[**][%%%%]\\n1**2%%%3 should return 6");
     }
 }
