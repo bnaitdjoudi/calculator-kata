@@ -32,4 +32,16 @@ public class StringCalculatorTest {
 
         assertEquals(calculator.add("1,2,3"), 6,"1,2,3 should return 6");
     }
+
+    @Test
+    public void supportNewLine() {
+
+        assertEquals(6, calculator.add("1\n2,3"),"1\\n2,3 should return 6");
+    }
+
+    @Test
+    public void differenteSeparatorLine() {
+
+        assertEquals(3,calculator.add("//;\\n1;2"),"//;\\n1;2 should return 3");
+    }
 }
